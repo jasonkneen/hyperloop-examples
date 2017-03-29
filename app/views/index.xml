@@ -5,7 +5,7 @@
 	See app/lib/xp.ui.js for how we use this to emulate the iOS-only NavigationWindow for Android
 	-->
 	<NavigationWindow id="navWin" module="xp.ui">
-		<Window title="Samples">
+		<Window title="Samples" onOpen="requestReviewDialog">
 			<ListView onItemclick="onListViewItemclick">
 				<ListSection>
 					<ListItem itemId="autolayout" platform="ios" title="Auto Layout"/>
@@ -13,6 +13,8 @@
 					<ListItem itemId="httprequest" title="HTTP Request"/>
 					<ListItem itemId="animateview" title="View Animation"/>
 					<ListItem itemId="label" title="Styled Labels"/>
+					<ListItem itemId="beacons" platform="ios" title="iBeacons"/>
+					<ListItem itemId="videoplayer" platform="ios" title="Video Player"/>
 					<ListItem itemId="drawrect" title="Custom Drawing"/>
 					<ListItem itemId="touches" title="Touches"/>
 					<ListItem itemId="tableview" platform="ios" title="Table View"/>
@@ -29,8 +31,8 @@
 					<ListItem itemId="blur" title="Blur"/>
 					<ListItem itemId="sizefill" title="FILL vs SIZE"/>
 					<ListItem itemId="progress" platform="android" title="Circular Progress"/>
-					<ListItem itemId="wkwebview" platform="ios" title="WKWebView Example"/>
-					<ListItem itemId="button" platform="ios" title="Button Example"/>
+					<ListItem itemId="wkwebview" platform="ios" title="WebView (WKWebView)"/>
+					<ListItem itemId="button" title="Button"/>
 				</ListSection>
 			</ListView>
 		</Window>

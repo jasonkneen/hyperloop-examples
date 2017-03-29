@@ -24,7 +24,7 @@
 		lightGray:  UIColor.colorWithRedGreenBlueAlpha(0.929, 0.933, 0.933, 1.000)
 	};
 
-	var DrawRectView = require('subclasses/drawrectview')
+	var DrawRectView = require('/subclasses/drawrectview')
 
 	/** Create a Titanium Wrapper View **/
 	var wrapper = Ti.UI.createView({
@@ -157,10 +157,10 @@
 		Styles.deepRed.setFill();
 		segmentWithPointerPath.fill();
 	}
-	var bounds = UIScreen.mainScreen().bounds;
+	var bounds = UIScreen.mainScreen.bounds;
 	view.frame = CGRectMake(0, 0, 256, 256);
 	view.center = CGPointMake(bounds.size.width / 2, (bounds.size.height / 2) - 30);
-	view.backgroundColor = UIColor.clearColor();
+	view.backgroundColor = UIColor.clearColor;
 	view.layer.allowsEdgeAntialiasing = true;
 	view.layer.cornerRadius = 10;
 

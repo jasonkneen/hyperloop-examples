@@ -8,7 +8,7 @@
 		UIKit = require('UIKit'),
 		UIColor = require('UIKit/UIColor');
 
-	var PanGestureRecognizer = require('subclasses/gesturerecognizer');
+	var PanGestureRecognizer = require('/subclasses/gesturerecognizer');
 	// create an instance of the class - one for each instance of the view
  	var panGesture1 = new PanGestureRecognizer();
 	panGesture1.addTargetAction(panGesture1, 'onAction:');
@@ -20,11 +20,11 @@
 
 	var view1 = UIView.alloc().initWithFrame(CGRectMake(40,40,100,100));
 	view1.addGestureRecognizer(panGesture1);
-	view1.backgroundColor = UIColor.greenColor();
+	view1.backgroundColor = UIColor.greenColor;
 
 	var view2 = UIView.alloc().initWithFrame(CGRectMake(40,180,100,100));
 	view2.addGestureRecognizer(panGesture2);
-	view2.backgroundColor = UIColor.redColor();
+	view2.backgroundColor = UIColor.redColor;
 
 	container.add(view1);
 	container.add(view2);

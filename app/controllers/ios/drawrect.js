@@ -9,7 +9,7 @@
 		CGContextFillRect = require('CoreGraphics').CGContextFillRect;
 
 	// create a unique UIView subclass for doing our custom drawing
-	var DrawRectView = require('subclasses/drawrectview')
+	var DrawRectView = require('/subclasses/drawrectview')
 
 	// convenience function for converting an angle in degress to radians
 	function DEGREES_TO_RADIANS (angle) { return (Number(angle) / 180.0 * Math.PI); };
@@ -22,11 +22,11 @@
 		var beams = 9;
 		var radius = rect.size.width / 2;
 
-		UIColor.whiteColor().setFill();
+		UIColor.whiteColor.setFill();
 		CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
 
-		UIColor.redColor().setFill();
-		UIColor.greenColor().setStroke();
+		UIColor.redColor.setFill();
+		UIColor.greenColor.setStroke();
 
 		var bezierPath = UIBezierPath.bezierPath();
 		var centerPoint = CGPointMake(rect.size.width / 2, rect.size.height / 2);
@@ -61,7 +61,7 @@
 	}
 
 
-	view.backgroundColor = UIColor.yellowColor();
+	view.backgroundColor = UIColor.yellowColor;
 	view.frame = CGRectMake(0, 0, 300, 300);
 	container.add(view);
 

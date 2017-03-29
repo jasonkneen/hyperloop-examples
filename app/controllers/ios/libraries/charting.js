@@ -5,7 +5,7 @@
 		JBBarChartView = require('JBChartView/JBBarChartView');
 
 	// This is a custom class that implements some delegate methods
-	var ChartDelegate = require('subclasses/chartdelegate');
+	var ChartDelegate = require('/subclasses/chartdelegate');
 
 	// create a new bar view
 	var chart = new JBBarChartView();
@@ -32,8 +32,8 @@
 	chart.dataSource = delegate;
 
 	// make the chart take up most of the screen bounds
-	var bounds = UIScreen.mainScreen().bounds;
-	chart.frame = CGRectMake(0, 0, bounds.size.width - 40, bounds.size.height - 100);
+	var bounds = UIScreen.mainScreen.bounds;
+	chart.frame = CGRectMake(20, 0, bounds.size.width - 40, bounds.size.height - 100);
 
 	// docs say we need to reload the data initially to cause it to paint
 	chart.reloadData();
